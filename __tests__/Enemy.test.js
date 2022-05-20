@@ -44,13 +44,19 @@ test("subtracts from enemy's health", () => {
 
     const oldHealth = enemy.health;
 
+    console.log(oldHealth)
+
     enemy.reduceHealth(5);
 
     expect(enemy.health).toBe(oldHealth - 5);
 
+    console.log(oldHealth)
+
     enemy.reduceHealth(99999);
 
     expect(enemy.health).toBe(0);
+
+    console.log(oldHealth)
 });
 
 test('gets a description of the enemy', () => {
